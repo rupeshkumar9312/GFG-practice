@@ -34,22 +34,22 @@ public class SumOfArrayElements {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int t = Integer.parseInt(scan.nextLine());
-        for (int i =0 ; i < t;i++){
+        for (int i = 0; i < t; i++) {
             int arrSize = (scan.nextInt());
-            int [] arr = new int[arrSize];
+            int[] arr = new int[arrSize];
             readArray(scan, arrSize, arr);
             int sum = sumOfArrayElements(arr);
             System.out.println(sum);
         }
     }
 
-    private static void readArray(Scanner scan, int arrSize, int[] arr) {
-        for(int j = 0;j<arrSize;j++){
+    public static void readArray(Scanner scan, int arrSize, int[] arr) {
+        for (int j = 0; j < arrSize; j++) {
             arr[j] = scan.nextInt();
         }
     }
 
-    static int sumOfArrayElements(int [] arr){
+    static int sumOfArrayElements(int[] arr) {
         return Arrays.stream(arr).sum();
     }
 
